@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -23,6 +24,9 @@ module.exports = {
       },
       colors: {
         "light-grey": "#767676",
+        "icon-light-mode": "#0000001a",
+        "icon-dark-mode": "#fff3",
+        dark: "#111",
       },
       borderRadius: {
         "avatar-init": "60% 40% 30% 70%/60% 30% 70% 40%",
@@ -37,6 +41,16 @@ module.exports = {
           },
           "100%": {
             borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%",
+          },
+        },
+        fadeIn: {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(-100px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateZ(0)",
           },
         },
       },

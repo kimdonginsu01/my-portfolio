@@ -37,10 +37,16 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <aside className="fixed top-0 left-0 w-sidebar-with h-screen px-24 py-0 bg-sidebar-color flex items-center">
+    <aside className="fixed z-10 top-0 left-0 w-sidebar-with h-screen px-24 py-0 bg-sidebar-color dark:bg-black flex items-center">
       <div className="w-full h-auto">
         <Link href="/">
-          <Image src="/assets/vietnam.png" alt="#" width={135} height={20} />
+          <Image
+            src="/assets/vietnam.png"
+            alt="#"
+            width={135}
+            height={20}
+            className="dark:invert"
+          />
         </Link>
         <div className="px-0 py-10">
           <ul>
@@ -52,7 +58,7 @@ const Sidebar = () => {
                   <Link
                     href={item.to}
                     key={index}
-                    className={`w-full h-10 font-[500] pb-3 flex items-center hover:tracking-[2px] transition-all ease-in-out duration-300 ${
+                    className={`w-full h-10 font-[500] pb-3 flex items-center hover:tracking-[2px] transition-all dark:text-white ease-in-out duration-300 ${
                       isActive
                         ? "opacity-100 tracking-[2px]"
                         : "opacity-70 text-light-grey tracking-wider"
@@ -63,7 +69,7 @@ const Sidebar = () => {
                       alt={item.title}
                       width={15}
                       height={15}
-                      className="mr-2 w-[15px] h-[15px]"
+                      className="mr-2 w-[15px] h-[15px] dark:invert"
                     />
                     <span className="text-[15px]">{item.title}</span>
                   </Link>

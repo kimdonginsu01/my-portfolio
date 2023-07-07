@@ -1,8 +1,10 @@
 import Sidebar from "@/components/Sidebar";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import ThemeSwitch from "@/components/ThemeSwitch";
+import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "htuien dev",
@@ -15,10 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Sidebar />
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={montserrat.className}>
+        <Providers>
+          <Sidebar />
+          {children}
+          <ThemeSwitch />
+        </Providers>
       </body>
     </html>
   );
