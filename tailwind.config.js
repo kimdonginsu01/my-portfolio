@@ -21,12 +21,18 @@ module.exports = {
       },
       borderColor: {
         "sidebar-border": "#f9f9f9",
+        light: "#dfdfdf",
       },
       colors: {
+        light: "#f8f8f8",
         "light-grey": "#767676",
         "icon-light-mode": "#0000001a",
         "icon-dark-mode": "#fff3",
         dark: "#111",
+        "tag-light-grey": "rgba(0,0,0,.04)",
+        "tag-dark-grey": "hsla(0,0%,100%,.08)",
+        "text-color": "#333",
+        "text-color-dark": "#999",
       },
       borderRadius: {
         "avatar-init": "60% 40% 30% 70%/60% 30% 70% 40%",

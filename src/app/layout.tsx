@@ -21,7 +21,9 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <Providers>
           <Sidebar />
-          {children}
+          <div className="ml-sidebar-with bg-light dark:bg-dark">
+            {children}
+          </div>
           <ThemeSwitch />
         </Providers>
       </body>

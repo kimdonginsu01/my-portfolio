@@ -44,7 +44,7 @@ export default function Home() {
   }, []);
 
   return (
-    <aside className="ml-sidebar-with h-screen flex items-center justify-center dark:bg-dark">
+    <aside className="h-screen flex items-center justify-center">
       <div className="flex items-center animate-[fadeIn_1.2s_ease]">
         <div className="min-w-[300px] min-h-[300px] relative rounded-full">
           <div
@@ -53,10 +53,10 @@ export default function Home() {
           ></div>
         </div>
         <div className="ml-20">
-          <h3 className="text-[48px] font-[800] uppercase mb-4 dark:text-white">
+          <h3 className="text-[48px] font-[800] uppercase mb-4 text-black dark:text-white">
             tuyen hoang
           </h3>
-          <h4 className="inline-block leading-[1.2] text-[24px] font-[500] mb-4 dark:text-white">
+          <h4 className="inline-block leading-[1.2] text-[24px] font-[500] mb-4 text-black dark:text-white">
             <span ref={typer}></span>
           </h4>
           <p className="font-[500] max-w-[450px] mb-5 text-light-grey">

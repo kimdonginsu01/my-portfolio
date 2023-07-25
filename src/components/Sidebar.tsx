@@ -60,7 +60,7 @@ const Sidebar = () => {
                     key={index}
                     className={`w-full h-10 font-[500] pb-3 flex items-center hover:tracking-[2px] transition-all dark:text-white ease-in-out duration-300 ${
                       isActive
-                        ? "opacity-100 tracking-[2px]"
+                        ? "opacity-100 text-black tracking-[2px]"
                         : "opacity-70 text-light-grey tracking-wider"
                     }`}
                   >
