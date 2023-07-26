@@ -37,7 +37,7 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <aside className="fixed z-10 top-0 left-0 w-sidebar-with h-screen px-24 py-0 bg-sidebar-color dark:bg-black flex items-center">
+    <aside className="fixed z-10 top-0 left-0 w-sidebar-with h-screen px-24 py-0 bg-sidebar-color dark:bg-black flex items-center border-r border-solid border-sidebar-border dark:border-sidebar-dark">
       <div className="w-full h-auto">
         <Link href="/">
           <Image

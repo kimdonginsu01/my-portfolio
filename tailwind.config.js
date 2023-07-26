@@ -21,7 +21,9 @@ module.exports = {
       },
       borderColor: {
         "sidebar-border": "#f9f9f9",
+        "sidebar-dark": "#111",
         light: "#dfdfdf",
+        dark: "hsla(0,0%,100%,.1)",
       },
       colors: {
         light: "#f8f8f8",
@@ -33,6 +35,12 @@ module.exports = {
         "tag-dark-grey": "hsla(0,0%,100%,.08)",
         "text-color": "#333",
         "text-color-dark": "#999",
+        "text-grey": "#efefef",
+        "text-skillbox": "#bbb",
+        bar: "rgba(0,0,0,.09)",
+        "bar-dark": "#444",
+        "resume-time": "rgba(0, 0, 0, 0.05)",
+        "resume-line-dark": "#56585c",
       },
       borderRadius: {
         "avatar-init": "60% 40% 30% 70%/60% 30% 70% 40%",

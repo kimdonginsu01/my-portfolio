@@ -13,7 +13,7 @@ const Button = ({ to, children, download = false }: IButtonProps) => {
       <Link
         href={to}
         download={download}
-        className="text-white dark:text-black bg-black dark:bg-white px-[40px] py-[18px] group"
+        className="text-white dark:text-black bg-black dark:bg-white block w-fit px-[40px] py-[18px] group"
       >
         <span className="group group-hover:tracking-widest transition-all ease-in-out duration-300">
           {children}
