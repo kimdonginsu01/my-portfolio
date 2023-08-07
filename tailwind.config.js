@@ -24,6 +24,7 @@ module.exports = {
         "sidebar-dark": "#111",
         light: "#dfdfdf",
         dark: "hsla(0,0%,100%,.1)",
+        testimonials: "#e5edf4",
       },
       colors: {
         light: "#f8f8f8",

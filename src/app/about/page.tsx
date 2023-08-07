@@ -1,89 +1,37 @@
+"use client";
+
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
 import SectionWrapper from "@/components/SectionWrapper";
+import {
+  education,
+  experience,
+  interests,
+  knowledge,
+  personalInfo,
+  programmingSkills,
+  softSkills,
+  testimonials,
+} from "@/utils/data";
 import { Mulish } from "next/font/google";
 import Image from "next/image";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./about.css";
 
 const mulish = Mulish({ subsets: ["latin"] });
 
-const personalInfo = {
-  birthday: "07.04.2001",
-  age: "22",
-  address: "Hanoi, Vietnam",
-  email: "hmtuyen.work@gmail.com",
-  phone: "0969650089",
-  nationality: "Vietnam",
-  study: "Hanoi University of Industry",
-  degree: "B.D",
-  interest: "Movies, Music",
-  freelance: "Available",
-};
-
-const programmingSkills = {
-  reacJS: "80%",
-  nodeJS: "75%",
-  javascript: "90%",
-};
-
-const softSkills = {
-  communication: "80%",
-  speech: "75%",
-  teamwork: "80%",
-};
-
-const knowledge = [
-  "Bootstrap, Angular",
-  "React, Vue, Laravel",
-  "Stylus, Sass, Less",
-  "Gulp, Webpack, Grunt",
-  "Tweenmax, GSAP",
-];
-
-const interests = [
-  "Make UI/UX Design",
-  "Create Mobile App",
-  "Site Optimization",
-  "Custom Website",
-  "Learn Ecommerce",
-];
-
-const education = [
-  {
-    time: "2019 - 2023",
-    university: "Haui",
-    degree: "Bachelor Degree",
-  },
-  {
-    time: "2017 - 2019",
-    university: "Haui",
-    degree: "Bachelor Degree",
-  },
-  {
-    time: "2015 - 2017",
-    university: "Haui",
-    degree: "Bachelor Degree",
-  },
-];
-
-const experience = [
-  {
-    time: "2022 - now",
-    company: "AHT Tech JSC",
-    position: "ReactJS Developer",
-  },
-  {
-    time: "2021 - 2022",
-    company: "VMO Holdings",
-    position: "NuxtJS Developer",
-  },
-  {
-    time: "2021 - 2022",
-    company: "VMO Holdings",
-    position: "NuxtJS Developer",
-  },
-];
-
 const About = () => {
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+  };
+
   return (
     <div className="animate-[fadeIn_1.2s_ease]">
       <SectionWrapper>
@@ -324,6 +272,41 @@ const About = () => {
           <h2 className="text-xl font-bold dark:text-white mb-10">
             Testimonials
           </h2>
+          <Slider {...settings} className="cursor-e-resize">
+            {testimonials.map((item, index) => (
+              <div key={index} className="px-4">
+                <div
+                  className="testimonials-text
+                          border-2 border-testimonials p-10 mb-8 relative
+                          dark:border-resume-line-dark"
+                >
+                  <p
+                    className={`${mulish.className} text-light-grey dark:text-text-skillbox`}
+                  >
+                    {item.text}
+                  </p>
+                </div>
+                <div className="flex items-center pl-5">
+                  <div className="relative w-[60px] h-[60px]">
+                    <div
+                      className="absolute top-0 right-0 bottom-0 left-0 bg-no-repeat bg-cover bg-center rounded-full"
+                      style={{ backgroundImage: `url(/assets/${item.avatar})` }}
+                    ></div>
+                  </div>
+                  <div className="pl-5">
+                    <h3 className="mb-0.5 font-semibold dark:text-white">
+                      {item.name}
+                    </h3>
+                    <span
+                      className={`${mulish.className} text-sm text-light-grey dark:text-text-skillbox`}
+                    >
+                      {item.job}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
         </div>
       </SectionWrapper>
     </div>
