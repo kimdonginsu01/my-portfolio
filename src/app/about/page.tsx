@@ -16,8 +16,8 @@ import {
 import { Mulish } from "next/font/google";
 import Image from "next/image";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import "./about.css";
 
 const mulish = Mulish({ subsets: ["latin"] });
@@ -100,7 +100,7 @@ const About = () => {
             )}
           </ul>
         </div>
-        <Button to="/assets/avatar.jpeg" download>
+        <Button to="/assets/TuyenHM_CV.docx.pdf" download>
           Download CV
         </Button>
         {/* </div> */}
