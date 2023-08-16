@@ -2,6 +2,7 @@
 
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
+import Map from "@/components/Map";
 import SectionWrapper from "@/components/SectionWrapper";
 import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
@@ -15,10 +16,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        process.env.EMAIL_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID as string,
         "template_t2dsim8",
         form.current as HTMLFormElement,
-        process.env.EMAIL_PUBLIC_KEY as string
+        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY as string
       )
       .then(
         (result) => {
@@ -34,6 +35,9 @@ const Contact = () => {
     <div className="animate-[fadeIn_1.2s_ease]">
       <SectionWrapper>
         <Heading tagName="Contact" heading="Get in touch" />
+        <div className="mb-12">
+          <Map />
+        </div>
         <form ref={form} onSubmit={handleSubmit}>
           <div>
             <input
