@@ -42,6 +42,7 @@ module.exports = {
         "bar-dark": "#444",
         "resume-time": "rgba(0, 0, 0, 0.05)",
         "resume-line-dark": "#56585c",
+        "service-item": "#323232",
       },
       borderRadius: {
         "avatar-init": "60% 40% 30% 70%/60% 30% 70% 40%",
@@ -68,9 +69,30 @@ module.exports = {
             transform: "translateZ(0)",
           },
         },
+        readMoreAnim2: {
+          "0%": {
+            transformOrigin: "left center",
+            transform: "scaleX(0.2)",
+          },
+          "70%": {
+            transformOrigin: "left center",
+            transform: "scaleX(1)",
+          },
+
+          "71%": {
+            transformOrigin: "right center",
+          },
+          to: {
+            transformOrigin: "right center",
+            transform: "scaleX(0.3)",
+          },
+        },
       },
       boxShadow: {
         avatar: "inset 0 0 0 9px hsla(0,0%,100%,.3)",
+      },
+      transitionTimingFunction: {
+        slideIn: "cubic-bezier(.6,.01,0,1)",
       },
     },
   },

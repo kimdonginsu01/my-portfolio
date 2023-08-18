@@ -17,16 +17,6 @@ const routes = [
     to: "/service",
   },
   {
-    icons: "/icons/briefcase.svg",
-    title: "Portfolio",
-    to: "/portfolio",
-  },
-  {
-    icons: "/icons/paper.svg",
-    title: "News",
-    to: "/news",
-  },
-  {
     icons: "/icons/mail.svg",
     title: "Contact",
     to: "/contact",
@@ -44,8 +34,9 @@ const Sidebar = () => {
             src="/assets/vietnam.png"
             alt="#"
             width={135}
-            height={20}
-            className="dark:invert"
+            height={24}
+            className="dark:invert w-[135px] h-[24px]"
+            priority={true}
           />
         </Link>
         <div className="px-0 py-10">

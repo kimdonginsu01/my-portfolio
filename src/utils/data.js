@@ -113,3 +113,42 @@ export const testimonials = [
     job: "Full-stack Developer",
   },
 ];
+
+export const services = [
+  {
+    title: "Web Design",
+    description:
+      "Web development is the most famous job in the world and it is very interesting...",
+  },
+  {
+    title: "Content Writing",
+    description:
+      "Web development is the most famous job in the world and it is very interesting...",
+  },
+  {
+    title: "Brand Identity",
+    description:
+      "Web development is the most famous job in the world and it is very interesting...",
+  },
+  {
+    title: "Live chat",
+    description:
+      "Web development is the most famous job in the world and it is very interesting...",
+  },
+  {
+    title: "After Effects",
+    description:
+      "Web development is the most famous job in the world and it is very interesting...",
+  },
+  {
+    title: "Mobile App",
+    description:
+      "Web development is the most famous job in the world and it is very interesting...",
+  },
+];
+
+export const funFacts = [
+  { heading: "777+", title: "Project Completed" },
+  { heading: "3k", title: "Happy Clients" },
+  { heading: "9k+", title: "Lines of Code" },
+];
