@@ -1,10 +1,12 @@
+import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import { Montserrat } from "next/font/google";
 import { ToastContainer } from "react-toastify";
+import { SidebarProvider } from "./contexts/menuContext";
+import { Providers as ThemeProviders } from "./providers";
 import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
-import { Providers } from "./providers";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -21,14 +23,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={montserrat.className}>
-        <Providers>
-          <Sidebar />
-          <div className="ml-sidebar-with bg-light dark:bg-dark">
-            {children}
-            <ToastContainer />
-          </div>
-          <ThemeSwitch />
-        </Providers>
+        <ThemeProviders>
+          <SidebarProvider>
+            <Header />
+            <Sidebar />
+            <div className="mt-header-height xl:mt-0 xl:ml-sidebar-width-sm 2xl:ml-sidebar-width bg-light dark:bg-dark">
+              {children}
+              <ToastContainer />
+            </div>
+            <ThemeSwitch />
+          </SidebarProvider>
+        </ThemeProviders>
       </body>
     </html>
   );

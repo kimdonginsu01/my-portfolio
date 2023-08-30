@@ -1,8 +1,8 @@
 "use client";
 
+import useSidebar from "@/app/contexts/menuContext";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { usePathname } from "next/navigation";
 
 const routes = [
@@ -24,10 +24,24 @@ const routes = [
 ];
 
 const Sidebar = () => {
+  const { isOpen, setIsOpen } = useSidebar();
   const pathname = usePathname();
 
+  const handleCloseMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <aside className="fixed z-10 top-0 left-0 w-sidebar-with h-screen px-24 py-0 bg-sidebar-color dark:bg-black flex items-center border-r border-solid border-sidebar-border dark:border-sidebar-dark">
+    <aside
+      className={`fixed w-sidebar-width-sm z-10 top-0 left-0 h-screen px-10 py-0 flex items-center border-r border-solid bg-sidebar-color border-sidebar-border transition-all ease-in-out duration-500 ${
+        isOpen ? "translate-x-0" : "-translate-x-full"
+      }
+                  xl:translate-x-0 xl:transition-none
+                  2xl:w-sidebar-width
+                  2xl:px-24
+                dark:bg-black
+                dark:border-sidebar-dark`}
+    >
       <div className="w-full h-auto">
         <Link href="/">
           <Image
@@ -37,6 +51,7 @@ const Sidebar = () => {
             height={24}
             className="dark:invert w-[135px] h-[24px]"
             priority={true}
+            onClick={handleCloseMenu}
           />
         </Link>
         <div className="px-0 py-10">
@@ -54,6 +69,7 @@ const Sidebar = () => {
                         ? "opacity-100 text-black tracking-[2px]"
                         : "opacity-70 text-light-grey tracking-wider"
                     }`}
+                    onClick={handleCloseMenu}
                   >
                     <Image
                       src={item.icons}

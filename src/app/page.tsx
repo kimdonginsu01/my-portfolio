@@ -1,28 +1,10 @@
 "use client";
 
+import { socials } from "@/utils/data";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
-
-const socials = [
-  {
-    icons: "/socials/facebook.svg",
-    to: "https://facebook.com/hoang.tuyen2001",
-  },
-  {
-    icons: "/socials/instagram.svg",
-    to: "https://instagram.com/htuien.47",
-  },
-  {
-    icons: "/socials/tik-tok.svg",
-    to: "https://tiktok.com/",
-  },
-  {
-    icons: "/socials/twitter.svg",
-    to: "https://twitter.com/",
-  },
-];
 
 export default function Home() {
   const typer = useRef(null);
@@ -44,16 +26,16 @@ export default function Home() {
   }, []);
 
   return (
-    <aside className="h-screen flex items-center justify-center">
-      <div className="flex items-center animate-[fadeIn_1.2s_ease]">
-        <div className="min-w-[300px] min-h-[300px] relative rounded-full">
+    <aside className="min-h-screen flex items-center justify-center">
+      <div className="flex items-center animate-[fadeIn_1.2s_ease] flex-col text-center lg:flex-row lg:text-left py-24">
+        <div className="min-w-[200px] min-h-[200px] md:min-w-[300px] md:min-h-[300px] relative rounded-full">
           <div
-            className="absolute top-0 bottom-0 left-0 right-0 bg-no-repeat bg-center bg-cover bg-blend-multiply shadow-avatar rounded-avatar-init overflow-hidden animate-[morph_8s_ease-in-out_1s_infinite] grayscale-[0.7]"
+            className="absolute top-0 bottom-0 left-0 right-0 bg-no-repeat bg-center bg-cover bg-blend-multiply shadow-avatar rounded-avatar-init overflow-hidden animate-[morph_8s_ease-in-out_1s_infinite] grayscale-[0.7] mb-7 lg:mb-0"
             style={{ backgroundImage: "url('/assets/avatar.jpeg')" }}
           ></div>
         </div>
-        <div className="ml-20">
-          <h3 className="text-[48px] font-[800] uppercase mb-4 text-black dark:text-white">
+        <div className="lg:ml-20">
+          <h3 className="text-4xl md:text-[48px] font-[800] uppercase mb-4 text-black dark:text-white">
             tuyen hoang
           </h3>
           <h4 className="inline-block leading-[1.2] text-[24px] font-[500] mb-4 text-black dark:text-white">
@@ -63,7 +45,7 @@ export default function Home() {
             Professional Programmer based in Vietnam and eager to challenge
             himself with new projects and technologies.
           </p>
-          <ul className="w-full float-left flex gap-4">
+          <ul className="w-full float-left flex gap-4 justify-center lg:justify-normal">
             {socials.map((item, index) => (
               <Link href={item.to} key={index} target="_blank">
                 <Image

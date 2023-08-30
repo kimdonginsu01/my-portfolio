@@ -14,7 +14,9 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       spacing: {
-        "sidebar-with": "450px",
+        "sidebar-width": "450px",
+        "sidebar-width-sm": "270px",
+        "header-height": "70px",
       },
       backgroundColor: {
         "sidebar-color": "#fefefe",
@@ -93,6 +95,23 @@ module.exports = {
       },
       transitionTimingFunction: {
         slideIn: "cubic-bezier(.6,.01,0,1)",
+        activeMenu: "cubic-bezier(.215,.61,.355,1)",
+      },
+      screens: {
+        sm: "640px",
+        // => @media (min-width: 640px) { ... }
+
+        md: "768px",
+        // => @media (min-width: 768px) { ... }
+
+        lg: "1040px",
+        // => @media (min-width: 1024px) { ... }
+
+        xl: "1200px",
+        // => @media (min-width: 1280px) { ... }
+
+        "2xl": "1600px",
+        // => @media (min-width: 1536px) { ... }
       },
     },
   },

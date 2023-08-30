@@ -24,7 +24,9 @@ const ThemeSwitch = () => {
   return (
     <label
       onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
-      className="cursor-pointer fixed w-14 h-12 flex items-center justify-center dark:invert bg-icon-light-mode right-0 top-1/2 -translate-y-1/2 rounded-tl-3xl rounded-bl-3xl select-none"
+      className="cursor-pointer items-center justify-center dark:invert bg-icon-light-mode select-none flex
+                fixed w-10 h-10 top-4 right-14 z-[9] rounded-full
+                xl:w-14 xl:h-12 xl:top-1/2 xl:-translate-y-1/2 xl:right-0 xl:rounded-tl-3xl xl:rounded-bl-3xl xl:rounded-tr-none xl:rounded-br-none"
     >
       {renderThemeChanger()}
     </label>

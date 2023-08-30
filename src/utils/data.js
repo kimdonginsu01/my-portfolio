@@ -1,3 +1,22 @@
+export const socials = [
+  {
+    icons: "/socials/facebook.svg",
+    to: "https://facebook.com/hoang.tuyen2001",
+  },
+  {
+    icons: "/socials/instagram.svg",
+    to: "https://instagram.com/htuien",
+  },
+  {
+    icons: "/socials/tik-tok.svg",
+    to: "https://tiktok.com/",
+  },
+  {
+    icons: "/socials/twitter.svg",
+    to: "https://twitter.com/",
+  },
+];
+
 export const personalInfo = {
   birthday: "07.04.2001",
   age: "22",
