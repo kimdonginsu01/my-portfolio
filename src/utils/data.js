@@ -96,37 +96,37 @@ export const experience = [
 
 export const testimonials = [
   {
-    text: "Beautiful minimalist design and great, fast response with upport. Highly recommend. Thanks Marketify!",
+    text: "Beautiful minimalist design and great, fast response with support. Highly recommend. Thanks Marketify!",
     avatar: "avatar.jpeg",
     name: "Hoang Tuyen",
     job: "Full-stack Developer",
   },
   {
-    text: "Beautiful minimalist design and great, fast response with upport. Highly recommend. Thanks Marketify!",
+    text: "Beautiful minimalist design and great, fast response with support. Highly recommend. Thanks Marketify!",
     avatar: "avatar.jpeg",
     name: "Hoang Tuyen",
     job: "Full-stack Developer",
   },
   {
-    text: "Beautiful minimalist design and great, fast response with upport. Highly recommend. Thanks Marketify!",
+    text: "Beautiful minimalist design and great, fast response with support. Highly recommend. Thanks Marketify!",
     avatar: "avatar.jpeg",
     name: "Hoang Tuyen",
     job: "Full-stack Developer",
   },
   {
-    text: "Beautiful minimalist design and great, fast response with upport. Highly recommend. Thanks Marketify!",
+    text: "Beautiful minimalist design and great, fast response with support. Highly recommend. Thanks Marketify!",
     avatar: "avatar.jpeg",
     name: "Hoang Tuyen",
     job: "Full-stack Developer",
   },
   {
-    text: "Beautiful minimalist design and great, fast response with upport. Highly recommend. Thanks Marketify!",
+    text: "Beautiful minimalist design and great, fast response with support. Highly recommend. Thanks Marketify!",
     avatar: "avatar.jpeg",
     name: "Hoang Tuyen",
     job: "Full-stack Developer",
   },
   {
-    text: "Beautiful minimalist design and great, fast response with upport. Highly recommend. Thanks Marketify!",
+    text: "Beautiful minimalist design and great, fast response with support. Highly recommend. Thanks Marketify!",
     avatar: "avatar.jpeg",
     name: "Hoang Tuyen",
     job: "Full-stack Developer",

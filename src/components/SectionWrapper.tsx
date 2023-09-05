@@ -7,7 +7,7 @@ interface ISectionWrapper {
 
 const SectionWrapper = ({ mono, children }: ISectionWrapper) => {
   return (
-    <div className={`py-24 px-10 ${mono && "bg-white dark:bg-black"}`}>
+    <div className={`py-24 px-5 md:px-10 ${mono && "bg-white dark:bg-black"}`}>
       <div className="mx-auto max-w-[1070px]">{children}</div>
     </div>
   );

@@ -13,7 +13,7 @@ const Service = () => {
       <SectionWrapper>
         <Heading tagName="Services" heading="What I Do" />
         <div className="w-full h-auto">
-          <ul className="grid grid-cols-3 gap-10">
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {services.map((service, index) => (
               <li key={index}>
                 <div className="px-8 py-10 bg-white dark:bg-service-item border border-[rgba(0,0,0,.1)] cursor-pointer transition-all duration-300 ease-in-out group">
@@ -50,7 +50,7 @@ const Service = () => {
         <div className="text-black dark:text-white">
           <h2 className="text-xl font-bold dark:text-white mb-10">Fun Facts</h2>
           <div>
-            <ul className="grid grid-cols-3 gap-10">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-10">
               {funFacts.map((fact, index) => (
                 <li
                   key={index}

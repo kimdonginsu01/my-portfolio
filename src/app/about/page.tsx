@@ -30,6 +30,17 @@ const About = () => {
     slidesToScroll: 1,
     dots: false,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -71,9 +82,9 @@ const About = () => {
           </p>
         </div>
         <div
-          className={`${mulish.className} text-light-grey leading-8 mb-8 pb-8 border-b border-solid border-light dark:border-dark flex justify-between`}
+          className={`${mulish.className} text-light-grey leading-8 mb-8 pb-8 border-b border-solid border-light dark:border-dark flex justify-between flex-col md:flex-row`}
         >
-          <ul className="w-1/2 pr-12">
+          <ul className="w-full md:w-1/2 md:pr-12">
             {Object.entries(personalInfo).map(
               (item, index) =>
                 index < Object.keys(personalInfo).length / 2 && (
@@ -86,7 +97,7 @@ const About = () => {
                 )
             )}
           </ul>
-          <ul className="w-1/2 pl-12">
+          <ul className="w-full md:w-1/2 md:pl-12">
             {Object.entries(personalInfo).map(
               (item, index) =>
                 index >= Object.keys(personalInfo).length / 2 && (
@@ -106,8 +117,8 @@ const About = () => {
         {/* </div> */}
       </SectionWrapper>
       <SectionWrapper mono>
-        <div className="flex">
-          <div className="text-black w-1/2 pr-12">
+        <div className="flex flex-col md:flex-row">
+          <div className="text-black mb-14 md:mb-0 md:w-1/2 md:pr-12">
             <h2 className="text-xl font-bold dark:text-white">
               Programming skills
             </h2>
@@ -128,7 +139,7 @@ const About = () => {
               ))}
             </ul>
           </div>
-          <div className="text-black w-1/2 pl-12">
+          <div className="text-black md:w-1/2 md:pl-12">
             <h2 className="text-xl font-bold dark:text-white">Soft skills</h2>
             <ul className="pt-8">
               {Object.entries(softSkills).map((item, index) => (
@@ -150,8 +161,8 @@ const About = () => {
         </div>
       </SectionWrapper>
       <SectionWrapper>
-        <div className="flex">
-          <div className="text-black w-1/2 pr-12">
+        <div className="flex flex-col md:flex-row">
+          <div className="text-black mb-14 md:mb-0 w-full md:w-1/2 md:pr-12">
             <h2 className="text-xl font-bold dark:text-white mb-10">
               Knowledge
             </h2>
@@ -171,7 +182,7 @@ const About = () => {
               ))}
             </ul>
           </div>
-          <div className="text-black w-1/2 pl-12">
+          <div className="text-black w-full md:w-1/2 md:pl-12">
             <h2 className="text-xl font-bold dark:text-white mb-10">
               Interests
             </h2>
@@ -194,8 +205,8 @@ const About = () => {
         </div>
       </SectionWrapper>
       <SectionWrapper mono>
-        <div className="flex">
-          <div className="text-black w-1/2 pr-12">
+        <div className="flex flex-col md:flex-row">
+          <div className="text-black mb-14 md:mb-0 w-full md:w-1/2 md:pr-12">
             <h2 className="text-xl font-bold dark:text-white mb-10">
               Education
             </h2>
@@ -211,7 +222,7 @@ const About = () => {
                 >
                   <div className="w-1/2 pr-5">
                     <span
-                      className={`inline-block bg-resume-time dark:bg-tag-dark-grey px-6 py-2 rounded-[50px] text-sm text-light-grey dark:text-white ${mulish.className}`}
+                      className={`inline-block bg-resume-time dark:bg-tag-dark-grey px-6 py-2 rounded-[50px] text-sm text-light-grey dark:text-white whitespace-nowrap ${mulish.className}`}
                     >
                       {item.time}
                     </span>
@@ -230,7 +241,7 @@ const About = () => {
               ))}
             </ul>
           </div>
-          <div className="text-black w-1/2 pl-12">
+          <div className="text-black w-full md:w-1/2 md:pl-12">
             <h2 className="text-xl font-bold dark:text-white mb-10">
               Experience
             </h2>
@@ -246,7 +257,7 @@ const About = () => {
                 >
                   <div className="w-1/2 pr-5">
                     <span
-                      className={`inline-block bg-resume-time dark:bg-tag-dark-grey px-6 py-2 rounded-[50px] text-sm text-light-grey dark:text-white ${mulish.className}`}
+                      className={`inline-block bg-resume-time dark:bg-tag-dark-grey px-6 py-2 rounded-[50px] text-sm text-light-grey dark:text-white whitespace-nowrap ${mulish.className}`}
                     >
                       {item.time}
                     </span>
